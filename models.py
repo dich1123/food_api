@@ -21,9 +21,9 @@ class Customers(db.Model):
     Creating and exploring customer table
     """
     id = db.Column('id', db.Integer, primary_key=True)
-    name = db.Column('name', db.String(100), unique=True, nullable=False)
-    phone = db.Column('phone', db.String(100), unique=True, nullable=False)
-    address = db.Column('address', db.String(100), unique=True, nullable=False)
+    name = db.Column('name', db.String(100), nullable=False)
+    phone = db.Column('phone', db.String(100), nullable=False)
+    address = db.Column('address', db.String(100), nullable=False)
 
     def __init__(self, name, phone, address):
         self.name = name
